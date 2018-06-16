@@ -19,7 +19,7 @@ func _ready():
 	$Control/HBoxContainer/ButtonHot.connect("pressed", self, "on_hot_pressed")
 	$Control/HBoxContainer/ButtonCold.connect("pressed", self, "on_cold_pressed")
 	
-	$Player.set_state(WaterStateClass)
+	$Player.set_state(IceStateClass)
 
 
 # UI callback functions. They set the appropriate state.

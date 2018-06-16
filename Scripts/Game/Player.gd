@@ -1,4 +1,4 @@
-extends Sprite
+extends KinematicBody2D
 
 
 # We will store the current_state and use it to process input.
@@ -10,6 +10,8 @@ var current_state
 # the need to change player code.
 func _process(delta):
 	current_state.process_input(delta)
+	
+	
 
 
 # Changes the state by freeing the current state (if any)
@@ -24,3 +26,6 @@ func set_state(StateClass):
 	
 	current_state = StateClass.new()
 	current_state.set_context(self)
+	
+	
+	
