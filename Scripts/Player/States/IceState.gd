@@ -1,10 +1,13 @@
 extends "res://Scripts/Player/States/State.gd"
 
+func _init():
+	aggregate_icon = load("res://ice.png")
+
 # Ice state. It enables the collision mask on layer 2
 # and applies gravity.
 func set_context(new_context):
 	.set_context(new_context)
-	# change sprite to ice
+	
 	# enable collision on bars
 	context.set_collision_mask_bit(1, true)
 

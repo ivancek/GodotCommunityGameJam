@@ -5,10 +5,12 @@ var speed = 300
 var context
 var direction = Vector2()
 var gravity_vector = Vector2()
+var aggregate_icon
 
 # Here we set the context on which to operate
 func set_context(new_context):
 	context = new_context
+	context.set_icon(aggregate_icon)
 
 # process_input is called by player (in his _process() function).
 # It handles the input and applies gravity and movement.
